@@ -1,0 +1,6 @@
+pydub
+ffmpeg-python
+openai-whisper
+sentence-transformers
+rich
+pyyaml
