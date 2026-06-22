@@ -1,4 +1,14 @@
 from pydub import AudioSegment
+import os
+from pathlib import Path
+
+def configure_ffmpeg():
+    project_root = Path(__file__).resolve().parents[2]
+    ffmpeg_bin = project_root / "ffmpeg" / "bin"
+
+    if ffmpeg_bin.exists():
+        os.environ["PATH"] += os.pathsep + str(ffmpeg_bin)
+
 
 def load_audio(path: str) -> AudioSegment:
     return AudioSegment.from_file(path)

@@ -1,0 +1,14 @@
+audio:
+  target_sample_rate: 16000
+  target_channels: 1
+  temp_dir: ".tmp"
+
+asr:
+  model_name: "base"
+
+topics:
+  n_topics: 5
+
+output:
+  default_format: "mp3"
+  metadata_format: "json"
